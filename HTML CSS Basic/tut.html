@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: orange;
+        }
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: anime1;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-direction: reverse ;
+        }
+        
+        /* @keyframes anime1 {
+            from {
+                width: 10px;
+            }
+            to {
+                width: 100%;
+            }
+        } */
+
+        @keyframes anime1 {
+            0% {
+                top: 0px;
+                left:0px;
+                width: 100%;
+            }
+            50%{
+                top: 500px;
+                left:0px;
+                width: 0px;
+            }
+            100%{
+                top:500x;
+                left:0px;
+                
+            }
+        }
+
+        #box{
+            display: flex;
+            height: 200px;
+            width:200px;
+            background-color: crimson;
+            justify-content: center;
+            align-items: center;
+            transition-property: background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            
+            /* transition: background-color 1s easy-in-out 2s; -> short hand use karney ho toh */
+        }
+
+        #box:hover{
+            background-color: blue;
+            /* transform: rotate(45deg); */
+            /* transform: skew(30deg); */
+            transform: scale(3);
+        }
+
+        .container3{
+            display: grid;
+            /* grid-template-columns: 300px auto 100px; */
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            grid-auto-rows: min-content;
+        }
+
+        .item{
+            /* height: 100px;
+            width: 100px; */
+            background-color: aqua;
+            margin: 32px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div> -->
+    <div class="container2">
+        <div id="box">
+            This is a box
+        </div>
+    </div>
+    <div class="container3">
+        <div class="item">This is item 1</div>
+        <div class="item">This is item 2</div>
+        <div class="item">This is item 3</div>
+        <div class="item">This is item 4</div>
+        <div class="item">This is item 5</div>
+    </div>
+</body>
+</html>

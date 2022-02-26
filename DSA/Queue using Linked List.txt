@@ -1,0 +1,55 @@
+//implementing queue using linked list
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor(){
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
+  //what is the very first item in queue
+  peek() {
+    return this.first;
+  }
+  //add to the queue
+  enqueue(value){
+    const newNode = new Node(value);
+    if (this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    this.length++;
+    return this;
+  }
+  //remove from the queue
+  dequeue(){
+    if (!this.first) {
+      return null;
+    }
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    const holdingPointer = this.first;
+    this.first = this.first.next;
+    this.length--;
+    return this;
+  }
+  //isEmpty;
+}
+
+const myQueue = new Queue();
+console.log(myQueue.peek());
+myQueue.enqueue('a');
+myQueue.enqueue('b');
+myQueue.enqueue('c');
+console.log(myQueue);
+myQueue.dequeue();
+console.log(myQueue);

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FOR SEO PURPOSE ONLY-->
+    <meta name="desciption" content="This is description">
+    <meta name="keywords" content="html, html tutorials,web">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>HTML Tut</title>
+
+    <!-- tHIS IS HOW YOU INCLUDE EXTERNAL CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!-- tHIS IS HOW YOU INCLUDE EXTERNAL js-->
+    <script src="script.js"></script>
+
+    <style>
+        .container {
+            display: inline-block;
+            border: 2px solid red;
+            background-color: whitesmoke;
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            background-color:yellowgreen;
+        }
+
+        .btn{
+            background-color: crimson;
+            padding: 6px;
+            border: nome;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+            /* relative : relative to its normal position
+               absolute : relative to first parent
+               sticky: so it move with us while scrolling
+               fixed: always visible even if we scrolling
+            */
+            position: relative;
+        }
+
+        .btn:hover {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    p :- paragraph tag
+    h1 - h6 :- heading tag
+    strong :- to make something bold
+    em :- to make something italic
+    br :- breaking tag | self closing tag
+    hr :- horizontal rule | inserts a horizontal line | self closing tag
+    a href="" :- hyper linking
+    target = _blank :_ to open in new tab 
+    ctrl + enter to enter into new line 
+    Loren*2 :- to get tags 2 times directly 
+    -->
+    <h2>HTML Forms</h2>
+    <form action="backend.php">
+        <!-- in for id value goes -->
+        <label for="name"> Name</label>
+        <div>
+            <input type="text" id="name">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div> 
+    </form>
+    <!-- emmet for faster coding boiler plate -->
+    <!-- span.myclass1 -->
+    <!-- <span class="myclass1"></span> -->
+    HTML Entities
+    <p> this is &nbsp;&nbsp;&nbsp; class</p>
+    <!-- &nbsp = non breaking spacing -->
+    <!-- https://dev.w3.org/html5/html-author/charref -->
+    &lt;p&gt; -> <p> <br>
+    &pound;   ->  pound symbol <br>
+    &copy;    -> copygright sysmbol <br>
+    empty character -> &#8203;
+
+    semantic tags For seo purpose helps search engine to know what the below code is about
+    <header>
+    <nav>
+    <section>
+    <article>
+    <aside>
+    <footer>
+
+        <div class="pcss">
+            <p>testing css</p>
+        </div>
+
+    Box model ->   margin , border , padding
+
+    <br> <br> <br>
+
+        <div class="box">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, nisi unde! Blanditiis repellendus explicabo, distinctio nobis rem recusandae quos repudiandae velit perspiciatis temporibus. Doloremque repellat recusandae consequatur, blanditiis numquam dolorem.
+            A libero nesciunt velit quos officia aspernatur, odit suscipit quidem cum voluptates fuga deleniti nihil sed, minus eveniet totam. Ducimus tempore ab eum sed blanditiis tenetur libero voluptatem impedit accusantium!</p>
+        </div>
+        <div class="box">
+            <h1>Heading</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, nisi unde! Blanditiis repellendus explicabo, distinctio nobis rem recusandae quos repudiandae velit perspiciatis temporibus. Doloremque repellat recusandae consequatur, blanditiis numquam dolorem.
+            A libero nesciunt velit quos officia aspernatur, odit suscipit quidem cum voluptates fuga deleniti nihil sed, minus eveniet totam. Ducimus tempore ab eum sed blanditiis tenetur libero voluptatem impedit accusantium!</p>
+        </div>
+    <div class="container" id="cont1">
+        <h3>Heading</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta aspernatur iure impedit minima hic odit, natus animi. Nulla, expedita nemo mollitia, at sapiente nam corporis itaque non repellat vel dolor!
+        Nemo, beatae sed odio inventore esse labore consequuntur, eum consequatur ratione repellat, autem explicabo! A, corporis qui nam rerum neque velit sint molestiae nemo vel, earum veritatis, eos impedit accusantium.</p>
+        <a href=" " class="btn">Read more</a>
+        <button class="btn">Read more</button>
+    </div>       
+        
+    
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+/* internal css more preference to external css */
+/* to target using id using # such as #pcss*/
+
+/* id selector */
+.pcss {
+    color: red; /* can be donw by name, rgba or Hex color(#) */
+    background-color: aqua;
+    /* if 1st na then second if second na then third and so on */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* 1/96 of an inch */
+    font-size: 33px;
+    /* line-height: 8.3em; em -> parent ka jitna size uska 8.3 times */
+    font-weight: bolder;
+    /* font-stretch: extra-condensed;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px; 
+    or we can use instead of above */
+    border: 3px solid black;
+    background-image: url('https://visualsoftech.com/img/mainImage.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.bgBlue{
+    background-color: salmon;
+}
+
+/* grouping selector */
+footer,span {
+    background-color: aqua;
+}
+
+.box {
+    /* margin: 10px;
+    padding: 23px 50px 6px 78px;  padding = top right left bottom */
+    float: left;
+    width: 50%;
+    clear: both;
+}
+
+/* flexbox is 1D layout method for laying out items in rows or cols
+better way to align items into a container
+flexiable box */
+
+.flex_container{
+/* initialize the container as a flex box  */
+display: flex;
+/* flex properties for flex container
+default value of flex direction is row */
+flex-direction: row-reverse;
+/* will justify the content in vertical direction  */
+
+justify-content: center;
+justify-content: space-evenly;
+/* har box ko left and rigth space milegi corners mein kam hogi */
+justify-content: space-around;
+/* will justify the content in horizontal direction */
+align-items: center;
+align-items: flex-end;
+}
+
+#item {
+    /* higher the order later it shows in the container */
+    order: 2;
+
+    /* flex box width will inc as width of screen inc */
+    flex-grow: 3;
+
+    flex-basis: 12px;
+}
+
+/* to keep font size relative to browser size or parent size we use rem */
+
+
+/* rem:- The root element's font-size
+Viewport Height and viewport width ( vh and vw ) 
+– A percentage of the full viewport height. 10vh will resolve to 10% of the current viewport height. Viewport Minimum ( vmin ) 
+– A percentage of the viewport width or height, whichever is smaller. */
+
+/* for responsive design we use media query */
+
+@media (max-width:500px)  {
+    .pcss{
+        display: block;
+        background-color: black;
+    }
+}
+
+@media (min-width:50) and (max-width:300px)  {
+    .pcss{
+        display: block;
+        background-color: yellow;
+    }
+}
+
+/* if i want to select all p tags in div only bahar hai vo nahithen syntax */
+
+div p{
+    font-size: 100px;
+}
+
+/* pseudo-class selector-> selects elements that are in a specific state */
+
+ a[target = '_blank'] {
+    color: #FF0000;
+  }
+  
+this will apply css for third child
+li:nth-child(3){
+    color: chocolate
+}
+
+/* this will apply css for all even child we can use even or 2n */
+li:nth-child(even){
+    color: chocolate
+}
+
+/* before and after sudo selectors: allow you to add content to a specific part of an element you have selected in a CSS rule */
+
+section::before{
+    background-image: url();
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+section::after{
+    content: "this is a after content";
+}
+
+/* box shadow */
+.pcss{
+    /* box-shadow: 10px 13px 50px red; */
+    box-shadow: inset 10px 13px 50px green ;
+}
+
+/* variables in css properties: cannot be access from outside for which we have to use global variables (root) */
+
+.box {
+    --box-color:blue;
+    width: 200px;
+    height: 200px;
+    background-color: var(--box-color);
+}
+
+:root{
+    --primary-color: blue;
+    --danger-color: red;
+    --max-width:100px;
+}
