@@ -135,21 +135,125 @@
 
 //Filtering an array
 
-let numbers = [1,2,3,4,5,6];
+// let numbers = [1,2,3,4,5,6];
 
-let onlyOddNumbers = [];
+// let onlyOddNumbers = [];
 
-for (let num of numbers){
-    if(num % 2 == 1){
-        onlyOddNumbers.push(num);
-    }
-}
-console.log(onlyOddNumbers);
+// for (let num of numbers){
+//     if(num % 2 == 1){
+//         onlyOddNumbers.push(num);
+//     }
+// }
+// console.log(onlyOddNumbers);
 
 //or we can do this prebuild function hai ye waala
 
-const onlyOddNumbers2 = numbers.filter(function(num){
-    return num % 2 === 1;
-})
+// const onlyOddNumbers2 = numbers.filter(function(num){
+//     return num % 2 === 1;
+// })
 
-console.log(onlyOddNumbers2);
+// console.log(onlyOddNumbers2);
+
+// Array and Object Destructuring
+
+// const user = {
+//     name: 'Ariyan',
+//     age: 40,
+//     address:{
+//         long: 343.23,
+//         lat: 239.1223,
+//     },
+// };
+
+// function greeting(user){
+//     console.log(`Hello ${user.name} and age ${user.age} from ${user.address.long}, ${user.address.lat}`);
+// }
+
+// better Way
+
+// function greeting(user){
+//     const {name,age,address} = user;
+//     const {long,lat} = address;
+
+//     console.log(`Hello ${name} and age ${age} from ${long}, ${lat}`);
+// }
+
+// greeting(user);
+
+// let [a,b,c,d] = [1,2,3,4];
+// console.log(a,b,d);
+
+// Data structure : Set
+
+// let set = new Set();
+
+// set.add(100);
+// set.add(200);
+// set.add(100);
+// set.add(300);
+// console.log(set);
+// console.log(set.size);
+
+// set.delete(200);
+// console.log(set);
+
+// set.clear() //removes all values from array
+
+//Data Structure : Map
+
+// let map = new Map();
+
+// map.set('Mango','Aam');
+// map.set('Banana','Kela');
+// map.set('score',100);
+
+// console.log(map);
+
+// console.log(map.has('Mango'));
+
+// map.delete('Banana');
+
+// console.log(map.values());
+// console.log(map.keys());
+
+// map.clear();
+
+// Weak Set, Weak Map
+
+// const ws = new WeakSet();
+
+// const Object1 = {};
+// const Object2 = {};
+
+// ws.add(Object1);
+// ws.add(Object2);
+
+// console.log(ws);
+
+//export a function
+
+
+// const addnumber = (num1,num2) => num1 + num2;
+
+// export default addnumber;
+
+// pad start, pad end
+
+let minute = '4';
+let year = '2';
+
+console.log(minute.padStart(2,'0'));
+console.log(year.padEnd(4,'0'));
+
+// Trim Start, trim end
+
+let name2 = '   ABC   '
+console.log(name2);
+console.log(name2.length);
+
+name2 = name2.trimStart(); //remove space from front
+name2 = name2.trimEnd(); //remove space from behind
+
+name2 = name2.trim(); //remove space from front & behind
+console.log(name2);
+console.log(name2.length);
